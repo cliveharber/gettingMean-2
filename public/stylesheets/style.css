@@ -1,0 +1,19 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', cursive;
+}
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+}
+
+legend {
+  font-family: 'Lobster', cursive;
+}
+
+body {
+  font-family: "Cabin", Arial, sans-serif;
+  color: #ffffff;
+  background-color: #108a93;
+}
