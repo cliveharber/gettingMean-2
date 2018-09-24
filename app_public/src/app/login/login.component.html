@@ -1,0 +1,19 @@
+<app-page-header [content]="pageContent.header"></app-page-header>
+<div class="row">
+  <div class="col-12 col-md-8">
+    <p class="lead">Not a member? Please <a routerLink="/register">register</a> first</p>
+    <form (ngSubmit)="onLoginSubmit(evt)">
+      <div role="alert" *ngIf="formErrors" class="alert alert-danger">{{ formError }}</div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" [(ngModel)]="credentials.email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="pasword" class="form-control" id="password" name="password" placeholder="e.g 12+ alphanumerics" [(ngModel)]="credentials.password">
+      </div>
+      <button type="submit" role="button" class="btn btn-primary">Sign In!</button>
+    </form>
+  </div>
+  <app-sidebar [content]="pageContent.sidebar"  class="col-12 col-md-4"></app-sidebar>
+</div>
