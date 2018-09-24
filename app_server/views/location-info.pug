@@ -1,0 +1,56 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+  .row
+    .col-12.col-lg-9
+      .row
+        .col-12.col-md-6
+          p.rating
+            +outputRating(location.rating)
+          p= location.address
+          .card.card-primary
+            .card-block
+              h2.card-title Opening hours
+              each time in location.openingTimes
+                p.card-text
+                  | #{time.days} :
+                  if time.closed
+                    | closed
+                  else
+                    | #{time.opening} - #{time.closing}
+          .card.card-primary
+            .card-block
+              h2.card-title Facilities
+              each facility in location.facilities
+                span.badge.badge-warning
+                  i.fa.fa-check
+                  | &nbsp;#{facility}
+                | &nbsp;
+        .col-12.col-md-6.location-map
+          .card.card-primary
+            .card-block
+              h2.card-title Location map
+              img.img-fluid.rounded(src=`http://maps.googleapis.com/maps/api/staticmap?center=${location.coords.lat},${location.coords.lng}&zoom=17&size=400x350&sensor=false&markers=${location.coords.lat},${location.coords.lng}&scale=2`)
+      .row
+        .col-12
+          .card.card-primary.review-card
+            .card-block
+              a.btn.btn-primary.float-right(href='/location/review/new') Add review
+              h2.card-title Customer reviews
+              each review in location.reviews
+                .row.review
+                  .col-12.no-gutters.review-header
+                    span.rating
+                      +outputRating(review.rating)
+                    span.reviewAuthor #{review.author}
+                    small.reviewTimestamp #{review.timestamp}
+                  .col-12
+                    p !{(review.reviewText).replace(/\n/g, '<br/>')}
+    .col-12.col-lg-3
+      p.lead #{location.name} #{sidebar.context}
+      p= sidebar.callToAction
