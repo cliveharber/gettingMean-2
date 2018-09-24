@@ -1,0 +1,19 @@
+<div class="card" *ngFor="let location of locations">
+  <div class="card-block">
+    <h4>
+      <a routerLink="/location/{{location._id}}">{{location.name}}</a>
+      <small>&nbsp;
+        <i class="fa{{ location.rating < 1 ? 'r' : 's' }} fa-star"></i>
+        <i class="fa{{ location.rating < 2 ? 'r' : 's' }} fa-star"></i>
+        <i class="fa{{ location.rating < 3 ? 'r' : 's' }} fa-star"></i>
+        <i class="fa{{ location.rating < 4 ? 'r' : 's' }} fa-star"></i>
+        <i class="fa{{ location.rating < 5 ? 'r' : 's' }} fa-star"></i>
+      </small>
+      <span class="badge badge-pill badge-default float-right">{{location.distance | distance }}</span>
+    </h4>
+    <p class="address">{{location.address}}</p>
+    <div class="facilities">
+      <span *ngFor="let facility of location.facilities" class="badge badge-warning">{{facility}}</span>
+    </div>
+  </div>
+</div>
