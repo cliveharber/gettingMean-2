@@ -89,12 +89,12 @@ const locationInfo = (req, res) => {
 };
 
 const addReview = (req, res) => {
-	res.render('location-review-form',
-		{
-			title: 'Review Starcups on Loc8r' ,
-			pageHeader: { title: 'Review Startcups' }
-		}
-	);
+  res.render('location-review-form',
+    {
+      title: 'Review Starcups on Loc8r' ,
+      pageHeader: { title: 'Review Starcups' }
+    }
+  );
 };
 
 module.exports = {

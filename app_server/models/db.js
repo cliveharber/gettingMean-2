@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const dbURL = 'mongodb://localhost/Loc8r';
+const dbURI = 'mongodb://localhost/Loc8r';
 const readLine = require('readline');
-mongoose.connect(dbURL, { useNewUrlParser: true });
+mongoose.connect(dbURI, { useNewUrlParser: true });
 
 mongoose.connection.on('connected', () => {
   console.log('connected');
