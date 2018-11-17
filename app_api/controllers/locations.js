@@ -26,7 +26,7 @@ const locationsListByDistance = async (req, res) => {
       {
         $geoNear: {
           near,
-          geoOptions
+          ...geoOptions
         }
       }
     ]);
