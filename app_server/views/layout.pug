@@ -8,13 +8,14 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     nav.navbar.fixed-top.navbar-expand-md.navbar-light
-      a.navbar-brand(href='/') Loc8r
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMain')
-        span.navbar-toggler-icon
-      #navbarMain.navbar-collapse.collapse
-        ul.navbar-nav.mr-auto
-          li.nav-item
-            a.nav-link(href='/about/') About
+      .container
+        a.navbar-brand(href='/') Loc8r
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMain')
+          span.navbar-toggler-icon
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/about/') About
 
     .container.content
       block content
@@ -24,6 +25,6 @@ html
           .col-12
             small &copy; Getting Mean - Simon Holmes/Clive Harber 2018
 
-    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
     script(src='/javascripts/bootstrap.min.js')
