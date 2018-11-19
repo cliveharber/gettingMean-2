@@ -11,6 +11,7 @@ block content
   .row
     .col-12.col-md-8
       .error= message
+
       each location in locations
         .card
           .card-block
@@ -22,7 +23,6 @@ block content
             .facilities
               each facility in location.facilities
                 span.badge.badge-warning= facility
-
 
     .col-12.col-md-4
       p.lead= sidebar

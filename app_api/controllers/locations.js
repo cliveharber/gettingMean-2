@@ -4,7 +4,7 @@ const Loc = mongoose.model('Location');
 const locationsListByDistance = async (req, res) => {
   const lng = parseFloat(req.query.lng);
   const lat = parseFloat(req.query.lat);
-  const point = {
+  const near = {
     type: "Point",
     coordinates: [lng, lat]
   };
@@ -25,7 +25,7 @@ const locationsListByDistance = async (req, res) => {
     const results = await Loc.aggregate([
       {
         $geoNear: {
-          near: point,
+          near,
           ...geoOptions
         }
       }
