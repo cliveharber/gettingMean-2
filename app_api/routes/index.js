@@ -3,6 +3,7 @@ const router = express.Router();
 const ctrlLocations = require('../controllers/locations');
 const ctrlReviews = require('../controllers/reviews');
 
+// locations
 router
   .route('/locations')
   .get(ctrlLocations.locationsListByDistance)
@@ -14,6 +15,7 @@ router
   .put(ctrlLocations.locationsUpdateOne)
   .delete(ctrlLocations.locationsDeleteOne);
 
+// reviews
 router
   .route('/locations/:locationid/reviews')
   .post(ctrlReviews.reviewsCreate);
