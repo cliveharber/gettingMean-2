@@ -148,7 +148,7 @@ const locationsUpdateOne = (req, res) => {
         closing: req.body.closing2,
         closed: req.body.closed2,
       }];
-      location.save((err, location) => {
+      location.save((err, loc) => {
         if (err) {
           res
             .status(404)
@@ -156,7 +156,7 @@ const locationsUpdateOne = (req, res) => {
         } else {
           res
             .status(200)
-            .json(location);
+            .json(loc);
         }
       });
     }
