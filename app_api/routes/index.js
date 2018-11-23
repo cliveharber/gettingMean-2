@@ -9,6 +9,7 @@ const ctrlLocations = require('../controllers/locations');
 const ctrlReviews = require('../controllers/reviews');
 const ctrlAuth = require('../controllers/authentication');
 
+// locations
 router
   .route('/locations')
   .get(ctrlLocations.locationsListByDistance)
@@ -20,6 +21,7 @@ router
   .put(auth, ctrlLocations.locationsUpdateOne)
   .delete(auth, ctrlLocations.locationsDeleteOne);
 
+// reviews
 router
   .route('/locations/:locationid/reviews')
   .post(ctrlReviews.reviewsCreate);
