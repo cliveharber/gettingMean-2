@@ -14,9 +14,9 @@ legend {
 }
 
 .navbar-light .navbar-brand {
-   font-family: 'Lobster', cursive;
-   color: #fff;
- }
+  font-family: 'Lobster', cursive;
+  color: #fff;
+}
 
 .navbar-light .navbar-toggler {
   color: white;
@@ -89,7 +89,7 @@ h1 small {
 }
 
 p {
-    margin-bottom: 0.65rem;
+  margin-bottom: 0.65rem;
 }
 
 a {

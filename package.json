@@ -1,5 +1,5 @@
 {
-  "name": "Getting-MEAN-2nd-editio",
+  "name": "Getting-MEAN-2nd-edition",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,7 +17,7 @@
     "express": "~4.16.4",
     "express-jwt": "^5.3.1",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.1.6",
+    "mongoose": "^5.3.11",
     "morgan": "~1.9.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
