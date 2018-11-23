@@ -125,13 +125,13 @@ const getLocationInfo = (req, res, callback) => {
       }
     }
   );
-}
+};
 
 const locationInfo = (req, res) => {
   getLocationInfo(req, res,
     (req, res, responseData) => renderDetailPage(req, res, responseData)
   );
-}
+};
 
 const renderReviewForm = (req, res, {name}) => {
   res.render('location-review-form',

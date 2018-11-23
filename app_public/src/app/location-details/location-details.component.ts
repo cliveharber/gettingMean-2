@@ -21,6 +21,8 @@ export class LocationDetailsComponent implements OnInit {
   public formVisible: boolean = false;
   public formError: string;
 
+  public googleAPIKey: string = '<Put your Google Maps API Key here>';
+
   constructor(
     private loc8rDataService: Loc8rDataService,
     private authenticationService: AuthenticationService

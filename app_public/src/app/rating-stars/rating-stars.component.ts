@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RatingStarsComponent implements OnInit {
 
-  @Input() thisRating: number;
+  @Input() rating: number;
 
   constructor() { }
 

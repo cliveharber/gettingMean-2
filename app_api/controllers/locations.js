@@ -4,7 +4,7 @@ const Loc = mongoose.model('Location');
 const locationsListByDistance = async (req, res) => {
   const lng = parseFloat(req.query.lng);
   const lat = parseFloat(req.query.lat);
-  const point = {
+  const near = {
     type: "Point",
     coordinates: [lng, lat]
   };
@@ -25,7 +25,7 @@ const locationsListByDistance = async (req, res) => {
     const results = await Loc.aggregate([
       {
         $geoNear: {
-          near: point,
+          near,
           ...geoOptions
         }
       }
@@ -148,7 +148,7 @@ const locationsUpdateOne = (req, res) => {
         closing: req.body.closing2,
         closed: req.body.closed2,
       }];
-      location.save((err, location) => {
+      location.save((err, loc) => {
         if (err) {
           res
             .status(404)
@@ -156,7 +156,7 @@ const locationsUpdateOne = (req, res) => {
         } else {
           res
             .status(200)
-            .json(location);
+            .json(loc);
         }
       });
     }

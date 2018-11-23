@@ -1,9 +1,9 @@
-<nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg navbar-dark">
+<nav class="navbar fixed-top navbar-expand-md navbar-light">
   <div class="container">
-    <button type="button" data-toggle="collapse" data-target="avbarMain" class="navbar-toggler navbar-toggler-right">
+    <a routerLink="" class="navbar-brand">Loc8r</a>
+    <button type="button" data-toggle="collapse" data-target="#navbarMain" class="navbar-toggler">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a routerLink="" class="navbar-brand">Loc8r</a>
     <div id="navbarMain" class="navbar-collapse collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -24,11 +24,13 @@
     </div>
   </div>
 </nav>
-<div class="container">
+<div class="container content">
   <router-outlet></router-outlet>
   <footer>
     <div class="row">
-      <div class="col-12"><small>&copy; Getting Mean - Simon Holmes/Clive Harber 2018</small></div>
+      <div class="col-12">
+        <small>&copy; Getting Mean - Simon Holmes/Clive Harber 2018</small>
+      </div>
     </div>
   </footer>
 </div>

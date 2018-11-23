@@ -1,13 +1,34 @@
 @import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', cursive;
+}
+
+legend {
+  font-family: 'Lobster', cursive;
+}
+
 .navbar {
   background-color: #ad1d28;
   border-color: #911821;
 }
 
-.navbar-brand {
-  font-family: 'Lobster', cursive;
-  color: #fff;
+.navbar-light .navbar-brand {
+   font-family: 'Lobster', cursive;
+   color: #fff;
+}
+
+.navbar-light .navbar-toggler {
+  color: white;
+  border-color: white;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svgxml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: white;
 }
 
 .card {
@@ -64,7 +85,7 @@ h1 small {
 }
 
 .facilities span.badge {
-  margin-right:2px;
+  margin-right: 2px;
 }
 
 p {
@@ -79,12 +100,8 @@ a:hover {
   color:#fff
 }
 
-h1, legend {
-  font-family: 'Lobster', cursive;
-}
-
 body {
   font-family: "Cabin", Arial, sans-serif;
-  color: #ffffff;
+  color: #fff;
   background-color: #108a93;
 }

@@ -4,17 +4,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const favicon = require('serve-favicon');
-const bodyParser = require('body-parser');
 const passport = require('passport');
 require('./app_api/models/db');
 require('./app_api/config/passport');
 
-//const indexRouter = require('./app_server/routes/index');
-const usersRouter = require('./app_server/routes/users');
-const apiRoutes = require('./app_api/routes/index');
+const apiRouter = require('./app_api/routes/index');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
@@ -34,10 +30,8 @@ app.use('/api', (req, res, next) => {
   next();
 });
 
-//app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/api', apiRoutes);
-app.get(/(\/about)|(\/location\/[a-z0-9]{24})/, function(req, res, next) {
+app.use('/api', apiRouter);
+app.get(/(\/about)|(\/location\/[a-z0-9]{24})/, function(req, res) {
   res.sendFile(path.join(__dirname, 'app_public', 'build', 'index.html'));
 });
 
@@ -55,7 +49,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
