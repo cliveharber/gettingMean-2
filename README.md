@@ -3,7 +3,7 @@
 
 This is the code for the sample 'Loc8r' application that is built through the course of the book Getting MEAN Second Edition.
 
-Getting MEAN Second Edition is published by Manning, and teaches readers how to develop web applications end-to-end using the MEAN stack with Node 10 and Angular 6. It is currently in early access through the MEAP program, with new chapters being released regularly.
+Getting MEAN Second Edition is published by Manning, and teaches readers how to develop web applications end-to-end using the MEAN stack with Node 11 and Angular 7. It is currently in early access through the MEAP program, with new chapters being released regularly.
 
 > Note: if you have the First Edition of the book using Node 4 and Angular 1 you need the [First Edition code](https://github.com/simonholmes/getting-MEAN/) instead.
 
@@ -24,17 +24,17 @@ There will be named branches for the various states of the code throughout the b
 * `chapter-11` **Chapter 11**: Authenticating users, managing sessions and securing APIs
 * `chapter-12` **Chapter 12**: Using an authentication API in Angular applications
 
-## Get the code
+## Get the code to run on your machine
 
 Pre-requisites:
 
 * Git installed
 * A command line interface capable of running Git commands
-* Node v6 installed (don't use 7 as it is unstable)
+* Node v11 installed
 
 To get the code for a specific branch:
 
-`$ git clone -b branch-name https://github.com/simonholmes/getting-MEAN-2.git`
+`$ git clone -b branch-name https://github.com/cliveharber/gettingMean-2.git`
 
 Then change into the folder the git clone command will create:
 
@@ -43,3 +43,26 @@ Then change into the folder the git clone command will create:
 And finally install the dependencies:
 
 `npm install`
+
+## Getting the code via Docker
+
+Pre-requisites:
+
+* Docker
+
+To get the code for a specific branch:
+
+`$ git clone -b branch-name https://github.com/cliveharber/gettingMean-2.git`
+
+Then change into the folder the git clone command will create:
+
+`$ cd getting-MEAN-2`
+
+And finally run the docker containers
+
+`make build`
+
+To remove the containers when complete
+
+`make destroy`
+
