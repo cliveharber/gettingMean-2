@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  express:
+    build: .
+    ports:
+      - 4200:4200
+      - 3000:3000
+
+  database:
+    image: mongo:4.0.4-xenial
+    ports:
+      - 27017:27017
