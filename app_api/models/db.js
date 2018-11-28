@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
-const dbURL = 'mongodb://localhost/Loc8r';
+const host = process.env.DB_HOST || '127.0.0.1'
+const dbURL = `mongodb://${host}/Loc8r`;
 const readLine = require('readline');
-mongoose.connect(dbURL, { useNewUrlParser: true });
+
+const connect = () => {
+  setTimeout(() => mongoose.connect(dbURL, { useNewUrlParser: true }), 1000);
+}
 
 mongoose.connection.on('connected', () => {
   console.log('connected');
@@ -9,6 +13,7 @@ mongoose.connection.on('connected', () => {
 
 mongoose.connection.on('error', err => {
   console.log('error: ' + err);
+  return connect();
 });
 
 mongoose.connection.on('disconnected', () => {
@@ -47,6 +52,8 @@ process.on('SIGTERM', () => {
     process.exit(0);
   });
 });
+
+connect();
 
 require('./locations');
 require('./users');
