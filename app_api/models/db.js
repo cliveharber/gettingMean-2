@@ -4,7 +4,7 @@ const dbURL = `mongodb://${host}/Loc8r`;
 const readLine = require('readline');
 
 const connect = () => {
-  setTimeout(() => mongoose.connect(dbURL, { useNewUrlParser: true }), 1000);
+  setTimeout(() => mongoose.connect(dbURL, { useNewUrlParser: true, useCreateIndex: true }), 1000);
 }
 
 mongoose.connection.on('connected', () => {
