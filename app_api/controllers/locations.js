@@ -55,10 +55,13 @@ const locationsCreate = (req, res) => {
     name: req.body.name,
     address: req.body.address,
     facilities: req.body.facilities.split(","),
-    coords: [
-      parseFloat(req.body.lng),
-      parseFloat(req.body.lat)
-    ],
+    coords: {
+      type: "Point",
+      coordinates: [
+        parseFloat(req.body.lng),
+        parseFloat(req.body.lat)
+      ],
+    },
     openingTimes: [
       {
         days: req.body.days1,
