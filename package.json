@@ -10,19 +10,19 @@
     "npm": ">=6.4.0"
   },
   "dependencies": {
-    "body-parser": "~1.18.3",
-    "cookie-parser": "~1.4.3",
-    "debug": "~4.1.0",
-    "dotenv": "^6.1.0",
-    "express": "~4.16.4",
+    "body-parser": "~1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "~4.17.1",
     "express-jwt": "^5.3.1",
-    "http-errors": "^1.7.1",
-    "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.3.11",
+    "http-errors": "^1.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.4",
     "morgan": "~1.9.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "pug": "~2.0.3",
+    "pug": "~2.0.4",
     "request": "^2.88.0",
     "serve-favicon": "~2.5.0"
   }
