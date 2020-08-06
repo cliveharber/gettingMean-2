@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const host = process.env.DB_HOST || '127.0.0.1'
-const dbURL = `mongodb://${host}/Loc8r`;
+const host = process.env.DB_HOST || '127.0.0.1/Loc8r'
+const dbURL = `mongodb://${host}`;
 const readLine = require('readline');
 
 const connect = () => {
-  setTimeout(() => mongoose.connect(dbURL, { useNewUrlParser: true, useCreateIndex: true }), 1000);
+  setTimeout(() => mongoose.connect(dbURL, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }), 1000);
 }
 
 mongoose.connection.on('connected', () => {
