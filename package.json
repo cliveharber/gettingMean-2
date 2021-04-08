@@ -1,22 +1,20 @@
 {
-  "name": "Getting-MEAN-2nd-edition",
+  "name": "gettingmean-2",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "engines": {
-    "node": ">=11.0.0",
-    "npm": ">=6.4.0"
+    "node": ">=12.18.3",
+    "npm": ">=6.14.6"
   },
   "dependencies": {
-    "body-parser": "~1.18.3",
-    "cookie-parser": "~1.4.3",
-    "debug": "~4.1.0",
-    "express": "~4.16.4",
-    "http-errors": "^1.7.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "~2.0.3",
-    "serve-favicon": "~2.5.0"
+    "pug": "2.0.0-beta11"
   }
 }
