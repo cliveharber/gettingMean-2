@@ -18,7 +18,7 @@ router
 router
   .route('/locations/:locationid')
   .get(ctrlLocations.locationsReadOne)
-  .put(auth, ctrlLocations.locationsUpdateOne)
+  .put(ctrlLocations.locationsUpdateOne)
   .delete(ctrlLocations.locationsDeleteOne);
 
 // reviews
