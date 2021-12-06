@@ -13,24 +13,24 @@ const ctrlAuth = require('../controllers/authentication');
 router
   .route('/locations')
   .get(ctrlLocations.locationsListByDistance)
-  .post(auth, ctrlLocations.locationsCreate);
+  .post(ctrlLocations.locationsCreate);
 
 router
   .route('/locations/:locationid')
   .get(ctrlLocations.locationsReadOne)
-  .put(auth, ctrlLocations.locationsUpdateOne)
-  .delete(auth, ctrlLocations.locationsDeleteOne);
+  .put(ctrlLocations.locationsUpdateOne)
+  .delete(ctrlLocations.locationsDeleteOne);
 
 // reviews
 router
   .route('/locations/:locationid/reviews')
-  .post(ctrlReviews.reviewsCreate);
+  .post(auth, ctrlReviews.reviewsCreate);
 
 router
   .route('/locations/:locationid/reviews/:reviewid')
   .get(ctrlReviews.reviewsReadOne)
-  .put(ctrlReviews.reviewsUpdateOne)
-  .delete(ctrlReviews.reviewsDeleteOne);
+  .put(auth, ctrlReviews.reviewsUpdateOne)
+  .delete(auth, ctrlReviews.reviewsDeleteOne);
 
 router.post('/register', ctrlAuth.register);
 router.post('/login', ctrlAuth.login);
